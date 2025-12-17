@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+    ../../modules/nixOs/globalNix.nix
   ];
 
   #Experimental features

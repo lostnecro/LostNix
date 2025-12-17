@@ -70,6 +70,7 @@
     swaybg
     firefox
     inputs.mangowc.packages.${pkgs.system}.default
+    inputs.nix-software-center.packages.${system}.nix-software-center
     
     #Code
     bat
@@ -190,7 +191,7 @@
     programs.virt-manager.enable = true;
 
     programs.thunderbird.enable = true;
-    programs.mangowc.enable = true;
+    #programs.mangowc.enable = true;
 
 
     programs.cdemu.enable = true;

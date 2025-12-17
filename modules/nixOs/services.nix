@@ -15,6 +15,16 @@
   services.libinput.enable = true;
   services.displayManager.sddm.enable = true;
 
+  #Niri
+  programs.niri.enable = true;
+  #programs.niri.package = pkgs.niri_git;
+
+  #Plasma 6
+  services.desktopManager.plasma6.enable = true;
+
+  #MangoWC
+  #programs.mangowc.enable = true;
+
   #Pipewire
     services.pipewire.enable = true;
     services.pipewire.pulse.enable = true;
