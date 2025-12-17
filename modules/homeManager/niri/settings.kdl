@@ -1,0 +1,28 @@
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "intl"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        //natural-scroll
+    }
+    focus-follows-mouse max-scroll-amount="10%"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+layout {
+    gaps 20
+    background-color "transparent"
+}
+

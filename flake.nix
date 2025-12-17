@@ -21,7 +21,7 @@
           ./hosts/laptop/configuration.nix
           
         ];
-      }
-    }
+      };
+    };
   };
 }

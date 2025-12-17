@@ -1,0 +1,18 @@
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match title="^Picture-in-Picture$"
+    open-floating true
+    open-focused false
+    geometry-corner-radius 0
+    clip-to-geometry false
+}
+
+layer-rule {
+    match namespace="^swww-daemon$"
+
+    place-within-backdrop true
+}

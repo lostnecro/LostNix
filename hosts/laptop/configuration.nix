@@ -35,15 +35,6 @@
     };
   };
 
-  #Network
-  networking.networkmanager.enable = true;
-
-  #Graphics
-  hardware.graphics = {
-    enable = true;
-    enable32bit = true; #Important for Steam and other 32bit programs
-  };
-
   #Unfree software
   nixpkgs.config.allowUnfree = true;
 

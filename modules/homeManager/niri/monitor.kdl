@@ -1,0 +1,23 @@
+output "eDP-1" {
+    // off
+    mode "1920x1080@60.001"
+    scale 1.0
+    position x=0 y=0
+
+    hot-corners {
+        off
+        top-left
+    }
+}
+
+output "HDMI-1" {
+    // off
+    mode "1360x768@60.015"
+    scale 1.0
+    position x=280 y=-768
+
+    hot-corners {
+        off
+        top-left
+    }
+}
