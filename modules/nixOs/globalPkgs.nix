@@ -69,8 +69,9 @@
     slurp
     swaybg
     firefox
-    inputs.mangowc.packages.${pkgs.system}.default
-    inputs.nix-software-center.packages.${system}.nix-software-center
+    telegram-desktop
+    #inputs.mangowc.packages.${pkgs.system}.default
+    #inputs.nix-software-center.packages.${system}.nix-software-center
     
     #Code
     bat
@@ -186,12 +187,12 @@
     programs.kdeconnect.enable = true;
 
     programs.labwc.enable = true;
+    programs.mango.enable = true;
     programs.xwayland.enable = true;
 
     programs.virt-manager.enable = true;
 
     programs.thunderbird.enable = true;
-    #programs.mangowc.enable = true;
 
 
     programs.cdemu.enable = true;

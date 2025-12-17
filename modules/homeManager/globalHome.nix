@@ -12,6 +12,7 @@
     ./swww.nix
     ./flameshot.nix
     ./niri.nix
+    ./mangowc/mangowc.nix
     #./gnome.nix
     #./flatpak.nix
     #./gtk.nix

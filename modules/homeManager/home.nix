@@ -16,6 +16,7 @@
   imports = [
     ./globalHome.nix
     inputs.mangowc.hmModules.mango
+    inputs.mango.hmModules.mango
   ];
 
   wayland.windowManager.mango = {
