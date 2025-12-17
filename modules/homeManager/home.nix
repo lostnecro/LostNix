@@ -13,10 +13,6 @@
     
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
   imports = [
     ./globalHome.nix
   ];

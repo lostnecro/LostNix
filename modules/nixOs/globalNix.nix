@@ -3,5 +3,7 @@
 {
   imports = [
     ./services.nix
+    ./locale.nix
+    ./firewall.nix
   ];
 }
