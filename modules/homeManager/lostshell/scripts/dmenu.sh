@@ -82,7 +82,7 @@ show_docsMenu() {
 ##Launches settings submenu##
 #############################
 show_settingsMenu() {
-    settingsMenu="󰌑 Go Back\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar\n Refresh Pyprland"
+    settingsMenu="󰌑 Go Back\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar\n󱁇 Mango IPC"
     navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Settings")
 
     case "$navigationSettings" in
@@ -90,14 +90,16 @@ show_settingsMenu() {
             show_mainMenu;;
         " Change wallpaper")
             bash $HOME/.config/lostshell/scripts/wallpaper.sh;;
+        "󱁇 Mango IPC")
+            bash $HOME/.config.lostshell/scripts/mango_ipc.sh;;
         "󱄅 Edit NixOS")
-           $EDITOR /etc/nixos;; 
+           $EDITOR /home/lost/Projects/LostNix;; 
         "󱄅 Rebuild NixOS")
-            ghostty -e sh -c "sudo nixos-rebuild switch --flake /etc/nixos#laptop; echo 'Pressione ENTER para fechar...' && read";;
+            ghostty -e sh -c "sudo nixos-rebuild switch --flake /home/lost/Projects/LostNix#laptop; echo 'Pressione ENTER para fechar...' && read";;
         " Restart Waybar")
             bash /home/lost/.config/lostshell/scripts/restartWaybar.sh;;
-        " Refresh Pyprland")
-            pypr reload;;
+#        " Refresh Pyprland")
+#            pypr reload;;
     esac
 }
 
@@ -128,9 +130,7 @@ mainMenu="󰀻 Apps\n Places\n Clipboard\n󰒚 Package Manager\n󰦭 Tools
     navigation=$(echo -e "$mainMenu" | rofi -dmenu -p "Main Menu")
     case "$navigation" in
         *Apps) rofi -show-icons -show drun;;
-        *Places) show_placesMenu ;;
         *Clipboard) clipcat-menu;;
-        "󰒚 Package Manager") hyprctl dispatch exec [float]kitty pacseek;;
         *Tools) show_toolsMenu;;
         *Documentation) show_docsMenu;;
         "󰌁 Color Picker") sleep 0.3 && hyprpicker -a;;
