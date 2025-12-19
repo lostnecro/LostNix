@@ -82,7 +82,7 @@ show_docsMenu() {
 ##Launches settings submenu##
 #############################
 show_settingsMenu() {
-    settingsMenu="󰌑 Go Back\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar\n󱁇 Mango IPC"
+    settingsMenu="󰌑 Go Back\n󱁇 Mango IPC\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar"
     navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Settings")
 
     case "$navigationSettings" in
@@ -90,8 +90,8 @@ show_settingsMenu() {
             show_mainMenu;;
         " Change wallpaper")
             bash $HOME/.config/lostshell/scripts/wallpaper.sh;;
-        "󱁇 Mango IPC")
-            bash $HOME/.config.lostshell/scripts/mango_ipc.sh;;
+        "󱁇 Switch mango layout")
+            show_mangoMenu;;
         "󱄅 Edit NixOS")
            $EDITOR /home/lost/Projects/LostNix;; 
         "󱄅 Rebuild NixOS")
@@ -102,6 +102,45 @@ show_settingsMenu() {
 #            pypr reload;;
     esac
 }
+
+
+################
+## Mango menu ##
+################
+
+show_mangoMenu() {
+    settingsMenu=" Change layout\n󱁇 Mango IPC"
+    navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Mango")
+
+    case "$navigationSettings" in
+        *layout)
+            show_mangoLayout;;
+        "󱁇 Mango IPC")
+            bash $HOME/.config/lostshell/scripts/mango_ipc.sh;;
+    esac
+}
+
+show_mangoLayout() {
+    settingsMenu=" Tile\n Scroller\n Monocle\n Grid\n Deck\n Center tile\n Vertical tile\n Right tile\n Vertical Scroller\n Vertical grid\n Vertical deck\n Tgmix"
+    navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Layout")
+
+    case "$navigationSettings" in
+        " Tile") mmsg -l "T";;
+        " Scroller") mmsg -l "S";;
+        " Monocle") mmsg -l "M";;
+        " Grid") mmsg -l "G";;
+        " Deck") mmsg -l "K";;
+        " Center tile") mmsg -l "CT";;
+        " Vertical tile") mmsg -l "VT";;
+        " Right tile") mmsg -l "RT";;
+        " Vertical Scroller") mmsg -l "VS";;
+        " Vertical grid") mmsg -l "VG";;
+        " Vertical deck") mmsg -l "VK";;
+        " Tgmix") mmsg -l "TG";;
+
+    esac
+}
+
 
 ##########################
 ##Launches power submenu##
@@ -125,26 +164,26 @@ show_powerMenu() {
 ## Main menu ##
 ###############
 show_mainMenu() {
-mainMenu="󰀻 Apps\n Places\n Clipboard\n󰒚 Package Manager\n󰦭 Tools\n󰧮 Documentation\n󰌁 Color Picker\n󰞅 Emoji\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
+mainMenu="󰀻 Apps\n Clipboard\n󱁇 Mango\n󰦭 Tools\n󰧮 Documentation\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
 ## Selection
     navigation=$(echo -e "$mainMenu" | rofi -dmenu -p "Main Menu")
     case "$navigation" in
         *Apps) rofi -show-icons -show drun;;
         *Clipboard) clipcat-menu;;
+        *Mango) show_mangoMenu;;
         *Tools) show_toolsMenu;;
         *Documentation) show_docsMenu;;
-        "󰌁 Color Picker") sleep 0.3 && hyprpicker -a;;
-        *Emoji) hypremoji;;
+        #"󰌁 Color Picker") sleep 0.3 && hyprpicker -a;;
         *Keybinds) hyprctl dispatch exec [float]kitty less $HOME/.config/lostshell/keybinds.conf;;
         *Settings) show_settingsMenu;;
         "⏻ Power Menu") show_powerMenu;;
         esac
 }
 
-
 ## Checking arguments
 if [[ -n "$1" ]]; then
     case "$1" in
+        mango) show_mangoMenu;;
         places) show_placesMenu;;
         docs) show_docsMenu;;
         settings) show_settingsMenu;;

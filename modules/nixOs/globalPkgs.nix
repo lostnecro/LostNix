@@ -70,6 +70,9 @@
     swaybg
     firefox
     telegram-desktop
+    xdg-desktop-portal-wlr
+    cliphist
+    wl-clip-persist
     #inputs.mangowc.packages.${pkgs.system}.default
     #inputs.nix-software-center.packages.${system}.nix-software-center
     

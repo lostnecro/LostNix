@@ -8,7 +8,7 @@ EXEMPLOS="<b>Sugestões de comandos:</b>
 • focus_next
 • reload</span>"
 
-input=$(rofi -dmenu -p "Mango:" -mesg "$EXEMPLOS")
+input=$(rofi -dmenu -p "Mango:" -theme-str 'entry { placeholder: "Ex: tile_gap 10, focus_next"; }')
 
 if [ -n "$input" ]; then
     mmsg -d "$input"

@@ -7,6 +7,6 @@
     "lostshell/scripts/dmenu.sh".source = ./lostshell/scripts/dmenu.sh;
     "lostshell/scripts/restartWaybar.sh".source = ./lostshell/scripts/restartWaybar.sh;
     "lostshell/scripts/wallpaper.sh".source = ./lostshell/scripts/wallpaper.sh;
-    "lostshell/scripts/mango_ipc.sh".source = ./lostshell/scripts/mango_ipc.sh
+    "lostshell/scripts/mango_ipc.sh".source = ./lostshell/scripts/mango_ipc.sh;
     };
 }
