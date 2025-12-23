@@ -122,6 +122,7 @@
     protonvpn-gui
     keepassxc
     hyprpolkitagent
+    gh
     
     #Games
     hydralauncher
@@ -194,6 +195,8 @@
 
     programs.cdemu.enable = true;
     #programs.seahorse.enable = false;
+
+    services.openssh.enable = true;
 
     nixpkgs.overlays = [
     (final: prev: {

@@ -22,7 +22,15 @@
       markdown-preview.enable = true;
       toggleterm.enable = true;
     };
-  
+
+    globals.mapleader = " ";
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>t";
+        action = ":ToggleTerm size=15 dir=~/Desktop direction=horizontal name=desktop<CR>";
+      }
+    ];
   
   };
 }

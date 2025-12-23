@@ -13,6 +13,7 @@
     ./flameshot.nix
     ./niri.nix
     ./mangowc/mango.nix
+    ./git.nix
     #./gnome.nix
     #./flatpak.nix
     #./gtk.nix
