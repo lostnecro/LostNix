@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "niri/workspaces"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "niri/workspaces", "ext/workspaces", "dwl/window"],
   "modules-center": [],
   "modules-right": [
     "tray",
@@ -68,7 +68,7 @@
 
   "pulseaudio": {
     "format": " {volume}%  {format_source}%",
-    "on-click": "pypr toggle volume"
+    "on-click": "pavucontrol"
   },
 
   "battery": {
@@ -99,5 +99,15 @@
       "default": "",
       "active": ""
     }
+  },
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
+    "sort-by-id": true
+  },
+  "dwl/window": {
+    "format": "[{layout}] {title}"
   }
 }

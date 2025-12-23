@@ -9,15 +9,11 @@
     #Utilities
     wget
     curl
-    rofi
-    pavucontrol
-    nwg-look
     brightnessctl
     distrobox
     distroshelf
     e2fsprogs
     killall
-    pyprland
     btop
     remmina
     alsa-tools
@@ -26,13 +22,9 @@
     kdePackages.dolphin
     scrcpy
     android-tools
-    satty
-    grim
-    slurp
     wl-clipboard
     wev
     brave
-    waybar
     onlyoffice-desktopeditors
     libreoffice-qt6-fresh
     nautilus
@@ -42,11 +34,8 @@
     xdg-desktop-portal-gtk
     kdePackages.polkit-kde-agent-1
     bluez
-    jetbrains.pycharm-community-bin
-    helvum
     parabolic
     kdePackages.kdepim-addons
-    refine
     ncdu
     pulseeffects-legacy
     baobab
@@ -58,23 +47,31 @@
     imagemagick
     euphonica
     ncmpcpp
-    gdm
     qutebrowser
     glibc
-    quickshell
-    foot
-    wmenu
     wl-clipboard
-    grim
-    slurp
-    swaybg
     firefox
     telegram-desktop
     xdg-desktop-portal-wlr
     cliphist
     wl-clip-persist
-    #inputs.mangowc.packages.${pkgs.system}.default
-    #inputs.nix-software-center.packages.${system}.nix-software-center
+    copyq
+    ungoogled-chromium
+    qpwgraph
+    ocs-url
+    gearlever
+    loupe
+    
+    # WM Stuff
+    rofi
+    nwg-look
+    pyprland
+    satty
+    grim
+    slurp
+    quickshell
+    waybar
+    pavucontrol
     
     #Code
     bat
@@ -82,7 +79,7 @@
     pipx
     playwright
     git
-    neovim
+    #neovim
     kitty
     vscode
     zed
@@ -91,10 +88,7 @@
     ghostty
     android-studio
     android-studio-tools
-    gearlever
-    loupe
-    lutris
-    ocs-url
+    #jetbrains.pycharm-community-bin
 
     #Emulators
     pcsx2
@@ -102,7 +96,7 @@
     snes9x
     retroarch-full
     ppsspp-qt
-    duckstation
+    #duckstation
 
     #Rice
     nerd-fonts.ubuntu
@@ -144,6 +138,7 @@
     mpvpaper
     nettools
     prismlauncher
+    lutris
 
     #Entertainment
     mpv
@@ -183,7 +178,6 @@
       gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
-
 
     programs.obs-studio.enable = true;
 

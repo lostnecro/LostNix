@@ -57,12 +57,12 @@
     startWhenNeeded = true;
     playlistDirectory = "/home/lost/Music/Playlist/";
     user = "lost";
-    extraConfig = ''
-    audio_output {
-      type "pipewire"
-      name "PipeWire Sound Server"
-        }
-    '';
+    #extraConfig = ''
+    #audio_output {
+    #  type "pipewire"
+    #  name "PipeWire Sound Server"
+    #    }
+    #'';
     };
     # Add this override to point MPD to your user's runtime directory
     systemd.services.mpd.environment = {
@@ -87,6 +87,9 @@
     services.udev.packages = with pkgs; [ 
     gnomeExtensions.gtk4-desktop-icons-ng-ding 
     ];
+
+    #Dont lock when lid close
+    services.logind.lidSwitchExternalPower = "ignore";
 
     #Nix garbage collector
     nix.gc = {

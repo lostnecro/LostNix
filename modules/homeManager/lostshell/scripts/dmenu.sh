@@ -109,7 +109,7 @@ show_settingsMenu() {
 ################
 
 show_mangoMenu() {
-    settingsMenu=" Change layout\n󱁇 Mango IPC"
+    settingsMenu=" Change layout\n󱁇 Mango IP\n󱁇 Reload"
     navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Mango")
 
     case "$navigationSettings" in
@@ -117,6 +117,8 @@ show_mangoMenu() {
             show_mangoLayout;;
         "󱁇 Mango IPC")
             bash $HOME/.config/lostshell/scripts/mango_ipc.sh;;
+        *Reload)
+            mmsg -d reload_config;;
     esac
 }
 
