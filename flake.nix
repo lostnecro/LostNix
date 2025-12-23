@@ -26,6 +26,7 @@
           #hardware-configuration.nix already imported in configuration.nix
           ./hosts/laptop/configuration.nix
           mangowc.nixosModules.mango
+          nixvim.nixosModules.nixvim
         ];
       };
     };
