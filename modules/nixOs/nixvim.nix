@@ -21,6 +21,20 @@
       neo-tree.enable = true;
       markdown-preview.enable = true;
       toggleterm.enable = true;
+      barbar.enable = true;
+      blink.enable = true;
+      blink-cmp.setupLspCapabilities = true;
+      #alpha.enable = true; # Main menu
+
+      lsp = {
+        enable = true;
+        servers = {
+          nil_ls.enable = true;    # Nix LSP
+          pyright.enable = true;   # Python LSP
+          html.enable = true;
+          marksman.enable = true;
+        };
+      };
     };
 
     globals.mapleader = " ";
@@ -30,7 +44,25 @@
         key = "<leader>t";
         action = ":ToggleTerm size=15 dir=~/Desktop direction=horizontal name=desktop<CR>";
       }
-    ];
-  
+      {
+        mode = "n";
+        key = "<C-l>";
+        action = ":BufferNext<CR>";
+        options = {
+        silent = true;
+        desc = "Próximo Buffer";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-h>";
+        action = ":BufferPrevious<CR>";
+        options = {
+        silent = true;
+        desc = "Buffer Anterior";
+        };
+      }
+      ];
   };
 }
+
