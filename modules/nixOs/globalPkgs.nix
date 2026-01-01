@@ -21,7 +21,6 @@
     ntfs3g
     kdePackages.dolphin
     scrcpy
-    android-tools
     wl-clipboard
     wev
     brave
@@ -61,6 +60,7 @@
     ocs-url
     gearlever
     loupe
+    obsidian
     
     # WM Stuff
     rofi
@@ -88,6 +88,7 @@
     ghostty
     android-studio
     android-studio-tools
+    android-tools
     #jetbrains.pycharm-community-bin
 
     #Emulators
@@ -183,6 +184,10 @@
     programs.obs-studio.enable = true;
 
     programs.kdeconnect.enable = true;
+    services.espanso = {
+      enable = true;
+      package = pkgs.espanso-wayland;
+    };
 
     programs.labwc.enable = true;
     programs.mango.enable = true;

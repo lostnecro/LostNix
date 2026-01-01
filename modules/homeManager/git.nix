@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}:
+{ pkgs, inputs, ... }:
 
 {
   programs.gh = {
@@ -12,7 +12,6 @@
 
   programs.git = {
   enable = true;
-  # ... your other config ...
   extraConfig = {
     credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
     };

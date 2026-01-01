@@ -14,7 +14,12 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   services.displayManager.sddm.enable = true;
+  #services.displayManager.gdm.enable = true;
 
+
+  #Gnome
+  #services.desktopManager.gnome.enable = true;
+  
   #Niri
   programs.niri.enable = true;
   #programs.niri.package = pkgs.niri_git;

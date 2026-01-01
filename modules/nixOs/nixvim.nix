@@ -24,6 +24,8 @@
       barbar.enable = true;
       blink.enable = true;
       blink-cmp.setupLspCapabilities = true;
+      ccc.enable = true;
+      dropbar.enable = true;
       #alpha.enable = true; # Main menu
 
       lsp = {
@@ -41,7 +43,7 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>t";
+        key = "<leader>tr";
         action = ":ToggleTerm size=15 dir=~/Desktop direction=horizontal name=desktop<CR>";
       }
       {
@@ -61,6 +63,16 @@
         silent = true;
         desc = "Buffer Anterior";
         };
+      }
+      {
+        mode = "n";
+        key = "<leader>ff";
+        action = ":Telescope find_files<CR>";
+      }
+      {
+        mode = "n";
+        key = "<leader>Tt";
+        action = ":Neotree toggle<CR>";
       }
       ];
   };

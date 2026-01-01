@@ -18,6 +18,10 @@
     };
 
     home.sessionVariables = {
-        EDITOR = "code";
+        EDITOR = "nvim";
     };
+
+    home.sessionPath = [
+      "~/.local/bin"
+    ];
 }
