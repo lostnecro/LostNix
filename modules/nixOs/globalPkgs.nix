@@ -7,7 +7,10 @@
     environment.systemPackages = with pkgs; [
     
     #Utilities
+    audacity
+    ardour
     wget
+    dconf-editor
     curl
     brightnessctl
     distrobox
@@ -26,14 +29,12 @@
     brave
     onlyoffice-desktopeditors
     libreoffice-qt6-fresh
-    nautilus
     xwayland-satellite
     gnome-keyring
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     kdePackages.polkit-kde-agent-1
     bluez
-    parabolic
     kdePackages.kdepim-addons
     ncdu
     pulseeffects-legacy
@@ -48,20 +49,20 @@
     ncmpcpp
     qutebrowser
     glibc
-    wl-clipboard
     firefox
     telegram-desktop
     xdg-desktop-portal-wlr
     cliphist
     wl-clip-persist
-    copyq
-    ungoogled-chromium
     qpwgraph
     ocs-url
     gearlever
+    nautilus
     loupe
     obsidian
-    
+    libadwaita
+    mission-center
+
     # WM Stuff
     rofi
     nwg-look

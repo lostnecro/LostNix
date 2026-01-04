@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 
-{home.packages = with pkgs; [
+{
+  home.packages = with pkgs; [
     gnomeExtensions.forge
     gnomeExtensions.veil
     gnomeExtensions.tophat
@@ -11,7 +12,8 @@
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.appindicator
-  ];        
+  ];
+
   dconf = {
     enable = true;
     settings = {
