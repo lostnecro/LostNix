@@ -16,6 +16,8 @@
   services.displayManager.sddm.enable = true;
   #services.displayManager.gdm.enable = true;
 
+  #Hyprland
+  programs.hyprland.enable = true;
 
   #Gnome
   #services.desktopManager.gnome.enable = true;
@@ -26,6 +28,9 @@
 
   #Plasma 6
   services.desktopManager.plasma6.enable = true;
+
+  #Pantheon
+  #services.desktopManager.pantheon.enable = true;
 
   #MangoWC
   #programs.mangowc.enable = true;
@@ -88,10 +93,6 @@
     security.pam.services.hyprland.enableGnomeKeyring = true;
 
     hardware.xpadneo.enable = true;
-
-    services.udev.packages = with pkgs; [ 
-    gnomeExtensions.gtk4-desktop-icons-ng-ding 
-    ];
 
     #Dont lock when lid close
     services.logind.lidSwitchExternalPower = "ignore";

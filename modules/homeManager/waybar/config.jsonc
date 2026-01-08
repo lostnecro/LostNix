@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "niri/workspaces", "ext/workspaces", "dwl/window"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "niri/workspaces"],
   "modules-center": [],
   "modules-right": [
     "tray",

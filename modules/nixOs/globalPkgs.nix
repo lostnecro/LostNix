@@ -8,6 +8,7 @@
     
     #Utilities
     audacity
+    chromium
     ardour
     wget
     dconf-editor
@@ -80,7 +81,6 @@
     pipx
     playwright
     git
-    #neovim
     kitty
     vscode
     zed
@@ -90,15 +90,12 @@
     android-studio
     android-studio-tools
     android-tools
-    #jetbrains.pycharm-community-bin
 
     #Emulators
     pcsx2
     rpcs3
     snes9x
-    retroarch-full
     ppsspp-qt
-    #duckstation
 
     #Rice
     nerd-fonts.ubuntu
@@ -133,7 +130,9 @@
     wineWowPackages.waylandFull
     winetricks
     heroic
-    vesktop
+    #vesktop
+    vencord
+    discord
     gamemode
     overlayed
     kdePackages.bluedevil
@@ -156,6 +155,9 @@
     audacity
     ffmpeg
     imagemagick
+
+    #Stream
+    obs-studio-plugins.obs-vkcapture
     ];
 
     #Fonts
