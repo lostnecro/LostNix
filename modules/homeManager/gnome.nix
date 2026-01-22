@@ -36,4 +36,23 @@
       "org/gnome/desktop/interface".show-battery-percentage = true;
     };
   };
+
+  gtk = {
+  enable = true;
+  theme = {
+    name = "Adwaita-dark"; # Or your preferred theme
+    package = pkgs.gnome-themes-extra;
+  };
+};
+
+# Force GTK4 to use the theme's CSS
+  xdg.configFile."gtk-4.0/gtk.css".source = "${pkgs.gnome-themes-extra}/share/themes/Adwaita-dark/gtk-4.0/gtk.css";
+  xdg.configFile."gtk-4.0/gtk-dark.css".source = "${pkgs.gnome-themes-extra}/share/themes/Adwaita-dark/gtk-4.0/gtk-dark.css";
+  xdg.configFile."gtk-4.0/assets".source = "${pkgs.gnome-themes-extra}/share/themes/Adwaita-dark/gtk-4.0/assets";
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
 }

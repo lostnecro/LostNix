@@ -19,6 +19,7 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        #WAYLAND_DISPLAY= "autorandr";
     };
 
     home.sessionPath = [

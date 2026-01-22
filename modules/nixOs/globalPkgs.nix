@@ -1,13 +1,17 @@
 { config, pkgs, inputs, ... }:
 
 
-    
+
 {   #System wide packages
 
     environment.systemPackages = with pkgs; [
-    
+
     #Utilities
     audacity
+    gtk2
+    gtk3
+    klassy
+    python314Packages.pyqt6
     chromium
     ardour
     wget
@@ -32,11 +36,18 @@
     libreoffice-qt6-fresh
     xwayland-satellite
     gnome-keyring
-    xdg-desktop-portal-gnome
+    #xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     kdePackages.polkit-kde-agent-1
+    linux-wallpaperengine
     bluez
     kdePackages.kdepim-addons
+    kdePackages.kdepim-runtime
+    kdePackages.akonadi-search
+    kdePackages.akonadi-calendar
+    kdePackages.akonadi-mime
+    kdePackages.kcalendarcore
+    kdePackages.kcontacts
     ncdu
     pulseeffects-legacy
     baobab
@@ -44,7 +55,7 @@
     p7zip
     unzip
     unrar
-    gdk-pixbuf 
+    gdk-pixbuf
     imagemagick
     euphonica
     ncmpcpp
@@ -62,7 +73,12 @@
     loupe
     obsidian
     libadwaita
-    mission-center
+    yt-dlp
+    media-downloader
+    deno
+    gnome-tweaks
+    mariadb
+    mysql84
 
     # WM Stuff
     rofi
@@ -74,7 +90,8 @@
     quickshell
     waybar
     pavucontrol
-    
+    hypridle
+
     #Code
     bat
     python314
@@ -90,16 +107,19 @@
     android-studio
     android-studio-tools
     android-tools
+    zed-editor
 
     #Emulators
     pcsx2
     rpcs3
     snes9x
     ppsspp-qt
+    zsnes2
 
     #Rice
     nerd-fonts.ubuntu
     hachimarupop
+    inter-nerdfont
     whitesur-gtk-theme
     whitesur-icon-theme
     whitesur-cursors
@@ -122,7 +142,7 @@
     keepassxc
     hyprpolkitagent
     gh
-    
+
     #Games
     hydralauncher
     protonup-ng
@@ -131,8 +151,9 @@
     winetricks
     heroic
     #vesktop
-    vencord
-    discord
+    equibop
+    #vencord
+    #discord
     gamemode
     overlayed
     kdePackages.bluedevil
@@ -155,9 +176,14 @@
     audacity
     ffmpeg
     imagemagick
+    carla
 
     #Stream
     obs-studio-plugins.obs-vkcapture
+    obs-studio-plugins.obs-multi-rtmp
+    obs-cmd
+    obs-cli
+
     ];
 
     #Fonts
@@ -168,6 +194,7 @@
     fira-code-symbols
     ipafont
     nerd-fonts.jetbrains-mono
+    minecraftia
 
     ];
     fonts.enableDefaultPackages = true;
@@ -184,11 +211,9 @@
     };
     programs.gamemode.enable = true;
 
-    programs.obs-studio.enable = true;
-
     programs.kdeconnect.enable = true;
     services.espanso = {
-      enable = true;
+      enable = false;
       package = pkgs.espanso-wayland;
     };
 
@@ -218,4 +243,4 @@
     })
   ];
 
-}   
+}
