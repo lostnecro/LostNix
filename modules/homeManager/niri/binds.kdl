@@ -8,10 +8,11 @@ binds {
 
     // Toolbox
     Mod+Escape { spawn-sh "bash ~/.config/lostshell/scripts/dmenu.sh"; }
+    Mod+F1 { spawn-sh "bash /home/lost/Projects/Stream/dmenu.sh"; }
 
     // Apps
-    Mod+F1 { spawn "ghostty"; }
     Mod+E { spawn "nautilus"; }
+    Mod+Return { spawn "ghostty"; }
 
     // Window control
     Mod+Q { close-window; }

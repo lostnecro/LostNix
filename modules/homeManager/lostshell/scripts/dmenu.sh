@@ -82,18 +82,18 @@ show_docsMenu() {
 ##Launches settings submenu##
 #############################
 show_settingsMenu() {
-    settingsMenu="󰌑 Go Back\n󱁇 Mango IPC\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar"
+    settingsMenu="󰌑 Go Back\n󱁇 Mango\n Change wallpaper\n󱄅 Edit NixOS\n󱄅 Rebuild NixOS\n Restart Waybar"
     navigationSettings=$(echo -e "$settingsMenu" | rofi -dmenu -p "Settings")
 
     case "$navigationSettings" in
         "󰌑 Go Back")
             show_mainMenu;;
+        "󱁇 Mango")
+            show_mangoMenu;;
         " Change wallpaper")
             bash $HOME/.config/lostshell/scripts/wallpaper.sh;;
-        "󱁇 Switch mango layout")
-            show_mangoMenu;;
         "󱄅 Edit NixOS")
-           $EDITOR /home/lost/Projects/LostNix;; 
+           $EDITOR /home/lost/Projects/LostNix;;
         "󱄅 Rebuild NixOS")
             ghostty -e sh -c "sudo nixos-rebuild switch --flake /home/lost/Projects/LostNix#laptop; echo 'Pressione ENTER para fechar...' && read";;
         " Restart Waybar")
@@ -166,7 +166,7 @@ show_powerMenu() {
 ## Main menu ##
 ###############
 show_mainMenu() {
-mainMenu="󰀻 Apps\n Clipboard\n󱁇 Mango\n󰦭 Tools\n󰧮 Documentation\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
+mainMenu="󰀻 Apps\n Clipboard\n󰦭 Tools\n󰧮 Documentation\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
 ## Selection
     navigation=$(echo -e "$mainMenu" | rofi -dmenu -p "Main Menu")
     case "$navigation" in

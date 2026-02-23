@@ -1,10 +1,12 @@
-{ config, pkgs, inputs, ... }:
+{
+  pkgs,
+  ...
+}:
 
+{
+  # System wide packages
 
-
-{   #System wide packages
-
-    environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
     #Utilities
     audacity
@@ -12,10 +14,7 @@
     gtk3
     klassy
     python314Packages.pyqt6
-    chromium
-    ardour
     wget
-    dconf-editor
     curl
     brightnessctl
     distrobox
@@ -36,10 +35,9 @@
     libreoffice-qt6-fresh
     xwayland-satellite
     gnome-keyring
-    #xdg-desktop-portal-gnome
+    xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     kdePackages.polkit-kde-agent-1
-    linux-wallpaperengine
     bluez
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
@@ -64,33 +62,34 @@
     firefox
     telegram-desktop
     xdg-desktop-portal-wlr
-    cliphist
-    wl-clip-persist
+    xdg-desktop-portal-hyprland
     qpwgraph
     ocs-url
     gearlever
-    nautilus
-    loupe
     obsidian
     libadwaita
     yt-dlp
     media-downloader
     deno
-    gnome-tweaks
     mariadb
     mysql84
+    nil
+    nixd
+    swww
+    kurve
+    plasma-panel-colorizer
 
     # WM Stuff
     rofi
     nwg-look
-    pyprland
     satty
     grim
     slurp
-    quickshell
     waybar
     pavucontrol
     hypridle
+    ddcutil
+    wl-gammactl
 
     #Code
     bat
@@ -114,7 +113,7 @@
     rpcs3
     snes9x
     ppsspp-qt
-    zsnes2
+    retroarch
 
     #Rice
     nerd-fonts.ubuntu
@@ -150,10 +149,7 @@
     wineWowPackages.waylandFull
     winetricks
     heroic
-    #vesktop
     equibop
-    #vencord
-    #discord
     gamemode
     overlayed
     kdePackages.bluedevil
@@ -162,6 +158,8 @@
     nettools
     prismlauncher
     lutris
+    blockbench
+    steamcmd
 
     #Entertainment
     mpv
@@ -169,14 +167,15 @@
     dunst
 
     #Creation
-    kdePackages.kdenlive
+    #kdePackages.kdenlive
     gimp
     inkscape
     blender
     audacity
-    ffmpeg
+    ffmpeg-full
     imagemagick
     carla
+    ardour
 
     #Stream
     obs-studio-plugins.obs-vkcapture
@@ -184,10 +183,10 @@
     obs-cmd
     obs-cli
 
-    ];
+  ];
 
-    #Fonts
-    fonts.packages = with pkgs; [
+  #Fonts
+  fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
     noto-fonts
@@ -196,43 +195,33 @@
     nerd-fonts.jetbrains-mono
     minecraftia
 
-    ];
-    fonts.enableDefaultPackages = true;
+  ];
+  fonts.enableDefaultPackages = true;
 
+  programs.hyprlock.enable = true;
 
-    programs.hyprlock.enable = true;
+  programs.steam = {
+    enable = true;
+    package = pkgs.millennium-steam;
+  };
+  programs.gamemode.enable = true;
 
-    #programs.waybar.enable = true;
+  programs.kdeconnect.enable = true;
+  services.espanso = {
+    enable = false;
+    package = pkgs.espanso-wayland;
+  };
 
-    programs.steam = {
-      enable = true;
-      #protontricks.enable = true;
-      gamescopeSession.enable = true;
-    };
-    programs.gamemode.enable = true;
+  programs.virt-manager.enable = true;
 
-    programs.kdeconnect.enable = true;
-    services.espanso = {
-      enable = false;
-      package = pkgs.espanso-wayland;
-    };
+  programs.cdemu.enable = true;
+  #programs.seahorse.enable = true;
 
-    programs.labwc.enable = true;
-    programs.mango.enable = true;
-    programs.xwayland.enable = true;
+  services.openssh.enable = true;
 
-    programs.virt-manager.enable = true;
-
-    programs.thunderbird.enable = true;
-
-
-    programs.cdemu.enable = true;
-    #programs.seahorse.enable = false;
-
-    services.openssh.enable = true;
-
-    nixpkgs.overlays = [
+  nixpkgs.overlays = [
     (final: prev: {
+      # --- Parte existente: Python ---
       pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
         (python-final: python-prev: {
           pyrate-limiter = python-prev.pyrate-limiter.overridePythonAttrs (oldAttrs: {
@@ -240,6 +229,7 @@
           });
         })
       ];
+
     })
   ];
 

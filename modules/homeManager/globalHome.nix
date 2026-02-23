@@ -1,6 +1,12 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
-{imports = [
+{
+  imports = [
     ./firefox.nix
     ./hyprland.nix
     ./waybar.nix
@@ -10,7 +16,7 @@
     ./qute.nix
     ./fastfetch.nix
     #./swww.nix
-    #./flameshot.nix
+    ./flameshot.nix
     ./niri.nix
     ./mangowc/mango.nix
     ./git.nix
@@ -18,5 +24,5 @@
     #./gnome.nix
     #./flatpak.nix
     #./gtk.nix
-];
+  ];
 }

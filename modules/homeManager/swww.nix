@@ -1,9 +1,8 @@
 { pkgs, inputs, ... }:
 
 {
-    services.swww = {
-        enable = false;
-        
+  services.swww = {
+    enable = true;
 
-    };
+  };
 }

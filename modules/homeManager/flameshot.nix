@@ -1,10 +1,10 @@
 { pkgs, config, ... }:
 
 {
-    services.flameshot = {
-        enable = false;
-        settings.General = {
-            useGrimAdapter = true;
-        };
+  services.flameshot = {
+    enable = true;
+    settings.General = {
+      useGrimAdapter = true;
     };
+  };
 }
