@@ -12,7 +12,7 @@
 
   programs.git = {
   enable = true;
-  extraConfig = {
+  settings = {
     credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
     };
   };

@@ -34,6 +34,7 @@
     settings = {
       server.port = 4567;
       server.ip = "localhost";
+      server.systemTrayEnabled = true;
     };
   };
 
@@ -50,6 +51,9 @@
 
   #Mango
   programs.mango.enable = true;
+  #programs.mango.addLoginEntry = true;
+
+  programs.hyprland.enable = true;
 
   #Xwayland
   programs.xwayland.enable = true;
@@ -61,25 +65,6 @@
   services.pipewire.pulse.enable = true;
   services.pipewire.alsa.enable = true;
   services.pipewire.jack.enable = true;
-  services.pipewire.extraConfig.pipewire."99-combined-mic" = {
-    "context.modules" = [
-      {
-        name = "libpipewire-module-loopback";
-        args = {
-          "node.description" = "YouTube Studio Mix";
-          "capture.props" = {
-            "media.class" = "Audio/Sink"; # This makes it show up as a set of speakers
-            "node.name" = "studio_sink";
-          };
-          "playback.props" = {
-            "media.class" = "Audio/Source"; # This makes the other end a microphone
-            "node.name" = "studio_mic";
-          };
-        };
-      }
-    ];
-  };
-
   #bluetooth
   hardware.bluetooth.enable = true;
 
@@ -91,6 +76,7 @@
     };
   };
   virtualisation.waydroid.enable = true;
+  networking.firewall.trustedInterfaces = [ "waydroid0" ];
   virtualisation.virtualbox.host.enableKvm = true;
   virtualisation.libvirtd.enable = true;
 
@@ -137,7 +123,6 @@
   hardware.xpadneo.enable = true;
 
   #Dont lock when lid close
-  services.logind.lidSwitchExternalPower = "ignore";
 
   #Nix garbage collector
   nix.gc = {

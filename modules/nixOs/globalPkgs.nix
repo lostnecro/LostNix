@@ -47,7 +47,6 @@
     kdePackages.kcalendarcore
     kdePackages.kcontacts
     ncdu
-    pulseeffects-legacy
     baobab
     zenity
     p7zip
@@ -56,7 +55,6 @@
     gdk-pixbuf
     imagemagick
     euphonica
-    ncmpcpp
     qutebrowser
     glibc
     firefox
@@ -65,7 +63,6 @@
     xdg-desktop-portal-hyprland
     qpwgraph
     ocs-url
-    gearlever
     obsidian
     libadwaita
     yt-dlp
@@ -78,6 +75,7 @@
     swww
     kurve
     plasma-panel-colorizer
+    nautilus
 
     # WM Stuff
     rofi
@@ -89,6 +87,7 @@
     pavucontrol
     hypridle
     ddcutil
+    vicinae
     wl-gammactl
 
     #Code
@@ -99,21 +98,18 @@
     git
     kitty
     vscode
-    zed
     docker-compose
     lazydocker
     ghostty
     android-studio
     android-studio-tools
     android-tools
-    zed-editor
 
     #Emulators
     pcsx2
     rpcs3
     snes9x
     ppsspp-qt
-    retroarch
 
     #Rice
     nerd-fonts.ubuntu
@@ -146,7 +142,7 @@
     hydralauncher
     protonup-ng
     protonup-qt
-    wineWowPackages.waylandFull
+    wineWow64Packages.waylandFull
     winetricks
     heroic
     equibop

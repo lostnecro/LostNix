@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    mangowc.url = "github:DreamMaoMao/mangowc";
+    mangowc.url = "github:mangowm/mango";
     mangowc.inputs.nixpkgs.follows = "nixpkgs";
 
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
