@@ -49,6 +49,16 @@
   qt.enable = true;
   qt.platformTheme = "kde";
 
+  #COSMIC
+  #services.desktopManager.cosmic.enable = true;
+  #services.desktopManager.cosmic.xwayland.enable = true;
+
+  #XFCE4
+  services.xserver.desktopManager.xfce = {
+    enable = false;
+    enableWaylandSession = false;
+  };
+
   #Mango
   programs.mango.enable = true;
   #programs.mango.addLoginEntry = true;
@@ -65,6 +75,7 @@
   services.pipewire.pulse.enable = true;
   services.pipewire.alsa.enable = true;
   services.pipewire.jack.enable = true;
+
   #bluetooth
   hardware.bluetooth.enable = true;
 
@@ -89,26 +100,6 @@
     }
   ];
 
-  #MPD
-  services.mpd = {
-    enable = true;
-    musicDirectory = "/home/lost/Music/";
-    startWhenNeeded = true;
-    playlistDirectory = "/home/lost/Music/Playlist/";
-    user = "lost";
-    #extraConfig = ''
-    #audio_output {
-    #  type "pipewire"
-    #  name "PipeWire Sound Server"
-    #    }
-    #'';
-  };
-  # Add this override to point MPD to your user's runtime directory
-  systemd.services.mpd.environment = {
-    # Replace 1000 with your actual UID if it differs
-    XDG_RUNTIME_DIR = "/run/user/1000";
-  };
-
   #Appimage
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
@@ -130,5 +121,5 @@
     dates = [ "10:00" ];
     options = "--delete-older-than 3d";
   };
-  nix.autoOptimiseStore = true;
+  nix.settings.auto-optimise-store = true;
 }

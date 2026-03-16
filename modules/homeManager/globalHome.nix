@@ -8,7 +8,6 @@
 {
   imports = [
     ./firefox.nix
-    ./hyprland.nix
     ./waybar.nix
     ./scripts.nix
     ./shell.nix
@@ -21,7 +20,7 @@
     ./mangowc/mango.nix
     ./git.nix
     ./stream.nix
-    #./gnome.nix
+    ./gnome.nix
     #./flatpak.nix
     #./gtk.nix
   ];

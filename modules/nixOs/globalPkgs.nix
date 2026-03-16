@@ -54,8 +54,6 @@
     unrar
     gdk-pixbuf
     imagemagick
-    euphonica
-    qutebrowser
     glibc
     firefox
     telegram-desktop
@@ -66,8 +64,6 @@
     obsidian
     libadwaita
     yt-dlp
-    media-downloader
-    deno
     mariadb
     mysql84
     nil
@@ -76,6 +72,9 @@
     kurve
     plasma-panel-colorizer
     nautilus
+    gparted
+    woeusb-ng
+    kdePackages.wallpaper-engine-plugin
 
     # WM Stuff
     rofi
@@ -85,10 +84,10 @@
     slurp
     waybar
     pavucontrol
-    hypridle
     ddcutil
     vicinae
     wl-gammactl
+    linux-wallpaperengine
 
     #Code
     bat
@@ -131,6 +130,8 @@
     gruvbox-plus-icons
     catppuccin-kvantum
     kdePackages.qtstyleplugin-kvantum
+    kdePackages.qtwebsockets
+    libsForQt5.qt5.qtwebsockets
 
     #Privacy/Security
     protonvpn-gui
@@ -147,7 +148,6 @@
     heroic
     equibop
     gamemode
-    overlayed
     kdePackages.bluedevil
     bluetui
     mpvpaper
@@ -155,7 +155,6 @@
     prismlauncher
     lutris
     blockbench
-    steamcmd
 
     #Entertainment
     mpv
