@@ -74,7 +74,6 @@
     nautilus
     gparted
     woeusb-ng
-    kdePackages.wallpaper-engine-plugin
 
     # WM Stuff
     rofi
@@ -87,7 +86,6 @@
     ddcutil
     vicinae
     wl-gammactl
-    linux-wallpaperengine
 
     #Code
     bat
@@ -103,6 +101,7 @@
     android-studio
     android-studio-tools
     android-tools
+    zed-editor
 
     #Emulators
     pcsx2
@@ -162,7 +161,7 @@
     dunst
 
     #Creation
-    #kdePackages.kdenlive
+    kdePackages.kdenlive
     gimp
     inkscape
     blender

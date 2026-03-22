@@ -40,8 +40,8 @@
   programs.kde-pim = {
     enable = true;
     merkuro = true;
-    kontact = true;
-    kmail = true;
+    kontact = false;
+    kmail = false;
   };
   qt.enable = true;
   qt.platformTheme = "kde";
@@ -71,8 +71,6 @@
       "data-root" = "/home/lost/Projects/DockerRoot";
     };
   };
-  virtualisation.waydroid.enable = true;
-  networking.firewall.trustedInterfaces = [ "waydroid0" ];
   virtualisation.virtualbox.host.enableKvm = true;
   virtualisation.libvirtd.enable = true;
 
