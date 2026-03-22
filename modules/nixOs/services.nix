@@ -26,9 +26,6 @@
   #Niri
   programs.niri.enable = true;
 
-  #GNOME
-  #services.desktopManager.gnome.enable = true;
-
   services.suwayomi-server = {
     enable = true;
     settings = {
@@ -49,21 +46,9 @@
   qt.enable = true;
   qt.platformTheme = "kde";
 
-  #COSMIC
-  #services.desktopManager.cosmic.enable = true;
-  #services.desktopManager.cosmic.xwayland.enable = true;
-
-  #XFCE4
-  services.xserver.desktopManager.xfce = {
-    enable = false;
-    enableWaylandSession = false;
-  };
-
   #Mango
   programs.mango.enable = true;
   #programs.mango.addLoginEntry = true;
-
-  programs.hyprland.enable = true;
 
   #Xwayland
   programs.xwayland.enable = true;
