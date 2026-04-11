@@ -1,28 +1,24 @@
-{ pkgs, inputs, ... }:
+{ ... }:
 
 {
-    programs.firefox = {
-        enable = true;
+  programs.firefox = {
+    enable = true;
 
-        profiles.pessoal = {
-            name = "Pessoal";
-            isDefault = true;
+    profiles.pessoal = {
+      name = "Pessoal";
+      isDefault = true;
 
-            settings = {
-                #Start page
-                "browser.startup.homepage" = "https://google.com";
-                
-                #Dark mode
-                "browser.in-content.dark-mode" = true;
-                "ui.systemUsesDarkTheme" = 1;
+      settings = {
+        #Start page
+        "browser.startup.homepage" = "https://google.com";
 
-                #Disable pocket
-                "extensions.pocket.enabled" = false;
+        #Dark mode
+        "browser.in-content.dark-mode" = true;
+        "ui.systemUsesDarkTheme" = 1;
 
-                #Search engine
-                "browser.search.defaultenginename" = "DuckDuckGo";
-                "browser.search.region" = "BR";
-            };
-        };
+        #Disable pocket
+        "extensions.pocket.enabled" = false;
+      };
     };
+  };
 }

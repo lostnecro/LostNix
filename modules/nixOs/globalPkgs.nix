@@ -18,7 +18,6 @@
     curl
     brightnessctl
     distrobox
-    distroshelf
     e2fsprogs
     killall
     btop
@@ -68,12 +67,13 @@
     mysql84
     nil
     nixd
-    swww
+    awww
     kurve
     plasma-panel-colorizer
     nautilus
     gparted
-    woeusb-ng
+    thunderbird
+    easyeffects
 
     # WM Stuff
     rofi
@@ -86,6 +86,8 @@
     ddcutil
     vicinae
     wl-gammactl
+    dunst
+    mpvpaper
 
     #Code
     bat
@@ -107,7 +109,7 @@
     pcsx2
     rpcs3
     snes9x
-    ppsspp-qt
+    ppsspp-sdl-wayland
 
     #Rice
     nerd-fonts.ubuntu
@@ -133,7 +135,7 @@
     libsForQt5.qt5.qtwebsockets
 
     #Privacy/Security
-    protonvpn-gui
+    proton-vpn
     keepassxc
     hyprpolkitagent
     gh
@@ -149,7 +151,6 @@
     gamemode
     kdePackages.bluedevil
     bluetui
-    mpvpaper
     nettools
     prismlauncher
     lutris
@@ -158,7 +159,6 @@
     #Entertainment
     mpv
     ani-cli
-    dunst
 
     #Creation
     kdePackages.kdenlive
@@ -199,12 +199,6 @@
     package = pkgs.millennium-steam;
   };
   programs.gamemode.enable = true;
-
-  programs.kdeconnect.enable = true;
-  services.espanso = {
-    enable = false;
-    package = pkgs.espanso-wayland;
-  };
 
   programs.virt-manager.enable = true;
 

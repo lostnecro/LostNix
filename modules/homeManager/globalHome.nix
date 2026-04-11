@@ -1,7 +1,4 @@
 {
-  config,
-  pkgs,
-  inputs,
   ...
 }:
 
@@ -14,14 +11,11 @@
     ./winapps.nix
     ./qute.nix
     ./fastfetch.nix
-    #./swww.nix
     ./flameshot.nix
     ./niri.nix
     ./mangowc/mango.nix
     ./git.nix
     ./stream.nix
     ./gnome.nix
-    #./flatpak.nix
-    #./gtk.nix
   ];
 }

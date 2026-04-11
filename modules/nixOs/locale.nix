@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-    #TimeZona
-    time.timeZone = "America/Sao_Paulo";
+  #TimeZona
+  time.timeZone = "America/Sao_Paulo";
 
-    # Select internationalisation properties.
-    i18n.defaultLocale = "en_US.UTF-8";
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
 
-     i18n.extraLocaleSettings = {
+  i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
     LC_IDENTIFICATION = "pt_BR.UTF-8";
     LC_MEASUREMENT = "pt_BR.UTF-8";
@@ -17,13 +17,17 @@
     LC_PAPER = "pt_BR.UTF-8";
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
-    };
+  };
 
-     # Configure keymap in X11
-     services.xserver.xkb = {
+  i18n.extraLocales = [
+    "all"
+  ];
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
     layout = "us";
     variant = "intl";
-    };
+  };
 
   i18n.inputMethod = {
     type = "fcitx5";
@@ -34,7 +38,6 @@
     ];
   };
 
-
-      # Configure console keymap
-     console.keyMap = "us-acentos";
+  # Configure console keymap
+  console.keyMap = "us-acentos";
 }

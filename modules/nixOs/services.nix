@@ -1,7 +1,4 @@
 {
-  pkgs,
-  lib,
-  inputs,
   ...
 }:
 
@@ -20,25 +17,19 @@
   #Display Manager
   services.xserver.enable = true;
   services.libinput.enable = true;
-  services.displayManager.sddm.enable = true;
-  #services.displayManager.gdm.enable = true;
+  #services.displayManager.sddm.enable = true;
+  services.displayManager.gdm.enable = true;
 
   #Niri
   programs.niri.enable = true;
 
-  services.suwayomi-server = {
-    enable = true;
-    settings = {
-      server.port = 4567;
-      server.ip = "localhost";
-      server.systemTrayEnabled = true;
-    };
-  };
+  #Gnome
+  services.desktopManager.gnome.enable = true;
 
   #Plasma 6
-  services.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = false;
   programs.kde-pim = {
-    enable = true;
+    enable = false;
     merkuro = true;
     kontact = false;
     kmail = false;
@@ -48,7 +39,6 @@
 
   #Mango
   programs.mango.enable = true;
-  #programs.mango.addLoginEntry = true;
 
   #Xwayland
   programs.xwayland.enable = true;
@@ -95,8 +85,6 @@
   security.pam.services.hyprland.enableGnomeKeyring = true;
 
   hardware.xpadneo.enable = true;
-
-  #Dont lock when lid close
 
   #Nix garbage collector
   nix.gc = {

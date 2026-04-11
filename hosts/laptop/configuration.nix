@@ -1,4 +1,7 @@
-{ pkgs, lib, inputs, ... }:
+{
+  inputs,
+  ...
+}:
 
 {
   #Modules
@@ -9,7 +12,10 @@
   ];
 
   #Experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   #Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -24,8 +30,13 @@
   users.users.lost = {
     isNormalUser = true;
     description = "Lost";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "libvirtd"
+      "camera"
+    ];
   };
 
   #Home Manager

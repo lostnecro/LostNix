@@ -4,14 +4,13 @@
   inputs = {
     mangowc.url = "github:mangowm/mango";
     mangowc.inputs.nixpkgs.follows = "nixpkgs";
-
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-    moku.url = "github:Youwes09/moku";
+    millennium.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
@@ -22,7 +21,6 @@
       mangowc,
       nixvim,
       millennium,
-      moku,
       ...
     }@inputs:
     let

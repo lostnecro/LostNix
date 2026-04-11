@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ inputs, ... }:
 
 {
   home.username = "lost";
@@ -6,11 +6,11 @@
   home.stateVersion = "25.11";
 
   home.packages = [
-    
+
   ];
 
   home.file = {
-    
+
   };
 
   imports = [
