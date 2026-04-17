@@ -4,15 +4,15 @@
   programs.qutebrowser = {
     enable = true;
     searchEngines = {
-      DEFAULT = "https://duckduckgo.com/?q={}";
-      gg = "https://www.google.com/search?q={}";
+      DEFAULT = "https://www.google.com/search?q={}";
+      ddg = "https://duckduckgo.com/search?q={}";
       wk = "https://en.wikipedia.org/wiki/{}";
       yt = "https://www.youtube.com/results?search_query={}";
     };
     settings = {
       tabs.position = "bottom";
 
-      url.default_page = "https://start.duckduckgo.com/";
+      url.default_page = "https://google.com/";
       content.blocking.method = "adblock";
       content.javascript.enabled = true;
       content.images = true;

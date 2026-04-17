@@ -67,6 +67,16 @@
   #Flatpak
   services.flatpak.enable = true;
 
+  #MPD
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/home/lost/Music/";
+  };
+
+  services.ympd.enable = true;
+
+  services.code-server.enable = true;
+
   programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";

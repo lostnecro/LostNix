@@ -10,6 +10,7 @@
 
     #Utilities
     audacity
+    planify
     gtk2
     gtk3
     klassy
@@ -74,6 +75,8 @@
     gparted
     thunderbird
     easyeffects
+    jamesdsp
+    ungoogled-chromium
 
     # WM Stuff
     rofi
@@ -176,6 +179,9 @@
     obs-studio-plugins.obs-multi-rtmp
     obs-cmd
     obs-cli
+
+    #Study
+    tagainijisho
 
   ];
 
