@@ -26,28 +26,16 @@
     alsa-tools
     alsa-firmware
     ntfs3g
-    kdePackages.dolphin
     scrcpy
     wl-clipboard
     wev
-    brave
-    onlyoffice-desktopeditors
-    libreoffice-qt6-fresh
     xwayland-satellite
     gnome-keyring
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     kdePackages.polkit-kde-agent-1
     bluez
-    kdePackages.kdepim-addons
-    kdePackages.kdepim-runtime
-    kdePackages.akonadi-search
-    kdePackages.akonadi-calendar
-    kdePackages.akonadi-mime
-    kdePackages.kcalendarcore
-    kdePackages.kcontacts
     ncdu
-    baobab
     zenity
     p7zip
     unzip
@@ -61,22 +49,19 @@
     xdg-desktop-portal-hyprland
     qpwgraph
     ocs-url
-    obsidian
     libadwaita
-    yt-dlp
     mariadb
     mysql84
     nil
     nixd
     awww
-    kurve
-    plasma-panel-colorizer
     nautilus
     gparted
     thunderbird
     easyeffects
     jamesdsp
     ungoogled-chromium
+    kdePackages.applet-window-buttons6
 
     # WM Stuff
     rofi
@@ -91,6 +76,10 @@
     wl-gammactl
     dunst
     mpvpaper
+    klassy
+    kurve
+    plasma-panel-colorizer
+    plasma-overdose-kde-theme
 
     #Code
     bat
@@ -103,14 +92,10 @@
     docker-compose
     lazydocker
     ghostty
-    android-studio
-    android-studio-tools
-    android-tools
     zed-editor
 
     #Emulators
     pcsx2
-    rpcs3
     snes9x
     ppsspp-sdl-wayland
 
@@ -134,8 +119,6 @@
     gruvbox-plus-icons
     catppuccin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    kdePackages.qtwebsockets
-    libsForQt5.qt5.qtwebsockets
 
     #Privacy/Security
     proton-vpn
@@ -156,8 +139,9 @@
     bluetui
     nettools
     prismlauncher
-    lutris
+    #lutris
     blockbench
+    millennium-steam
 
     #Entertainment
     mpv
@@ -200,8 +184,11 @@
 
   programs.hyprlock.enable = true;
 
+  services.logmein-hamachi.enable = true;
+  programs.haguichi.enable = true;
+
   programs.steam = {
-    enable = true;
+    enable = false;
     package = pkgs.millennium-steam;
   };
   programs.gamemode.enable = true;
@@ -212,19 +199,5 @@
   #programs.seahorse.enable = true;
 
   services.openssh.enable = true;
-
-  nixpkgs.overlays = [
-    (final: prev: {
-      # --- Parte existente: Python ---
-      pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
-        (python-final: python-prev: {
-          pyrate-limiter = python-prev.pyrate-limiter.overridePythonAttrs (oldAttrs: {
-            doCheck = false;
-          });
-        })
-      ];
-
-    })
-  ];
 
 }

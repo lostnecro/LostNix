@@ -16,6 +16,7 @@
     gnomeExtensions.quick-lofi
     gnomeExtensions.brightness-control-using-ddcutil
     gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.top-bar-organizer
   ];
 
   dconf = {
@@ -33,7 +34,6 @@
           "forge@jmmaranan.com"
           "vertical-workspaces@G-dH.github.com"
           "ding@rastersoft.com"
-          "quick-lofi@eucaue"
           "clipboard-indicator@tudmotu.com"
           "veil@dagimg-dot"
 

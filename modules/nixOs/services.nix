@@ -18,6 +18,7 @@
   services.xserver.enable = true;
   services.libinput.enable = true;
   #services.displayManager.sddm.enable = true;
+  #services.displayManager.plasma-login-manager.enable = true;
   services.displayManager.gdm.enable = true;
 
   #Niri
@@ -25,15 +26,12 @@
 
   #Gnome
   services.desktopManager.gnome.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  programs.geary.enable = true;
+  programs.nm-applet.enable = true;
 
-  #Plasma 6
+  #KDE
   services.desktopManager.plasma6.enable = false;
-  programs.kde-pim = {
-    enable = false;
-    merkuro = true;
-    kontact = false;
-    kmail = false;
-  };
   qt.enable = true;
   qt.platformTheme = "kde";
 
@@ -51,8 +49,16 @@
   services.pipewire.alsa.enable = true;
   services.pipewire.jack.enable = true;
 
+  #Clipboard
+  services.clipcat.enable = true;
+
   #bluetooth
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Class = "0x002c0414";
+    };
+  };
 
   #Docker
   virtualisation.docker = {
@@ -66,16 +72,6 @@
 
   #Flatpak
   services.flatpak.enable = true;
-
-  #MPD
-  services.mpd = {
-    enable = true;
-    musicDirectory = "/home/lost/Music/";
-  };
-
-  services.ympd.enable = true;
-
-  services.code-server.enable = true;
 
   programs.dconf.profiles.user.databases = [
     {
@@ -91,8 +87,7 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.hyprland.enableGnomeKeyring = true;
+  security.pam.services.hyprland.enableGnomeKeyring = false;
 
   hardware.xpadneo.enable = true;
 

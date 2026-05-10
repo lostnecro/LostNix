@@ -4,7 +4,7 @@
 
 {
   imports = [
-    ./firefox.nix
+    #./firefox.nix
     ./waybar.nix
     ./scripts.nix
     ./shell.nix

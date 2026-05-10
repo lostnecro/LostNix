@@ -29,6 +29,44 @@ show_placesMenu() {
         esac
 }
 
+#######################
+## Nix Shell options ##
+#######################
+show_nixShellMenu() {
+    # List of common tools you might want temporarily
+    shellMenu="󱄅 Neofetch\n󱄅 Btop\n󱄅 Cmatrix\n󱄅 Custom Package... (only GUI pkg)"
+    nav=$(echo -e "$shellMenu" | rofi -dmenu -p "Nix Shell")
+
+    case "$nav" in
+        "󱄅 Neofetch") ghostty -e nix shell nixpkgs#neofetch -c neofetch ;;
+        "󱄅 Btop") ghostty -e nix shell nixpkgs#btop -c btop ;;
+        "󱄅 Cmatrix") ghostty -e nix shell nixpkgs#cmatrix -c cmatrix ;;
+        "󱄅 Custom Package... (only GUI pkg)")
+            # Prompt for a package name
+            pkg=$(rofi -dmenu -p "Enter Package Name")
+            if [ -n "$pkg" ]; then
+                ghostty -e nix shell nixpkgs#"$pkg" -c $pkg
+            fi ;;
+    esac
+}
+#####################
+## Screenshot Menu ##
+#####################
+
+show_screenshotMenu() {
+    screenshotMenu="󰌑 Go Back\n󱣴 Region Screenshot\n󰍹 Monitor Screenshot"
+    navigationScreenshot=$(echo -e "$screenshotMenu" | rofi -dmenu -p "Screenshot")
+
+    case "$navigationScreenshot" in
+        "󰌑 Go Back")
+            show_mainMenu;;
+        "󱣴 Region Screenshot")
+            grim -g "$(slurp -w 2)" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png;;
+        "󰍹 Monitor Screenshot")
+            grim -o "$(slurp -o -f "%o")" - | satty --filename - --output-filename "$HOME/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png";;
+    esac
+}
+
 ##########################
 ##Launches tools submenu##
 ##########################
@@ -166,12 +204,14 @@ show_powerMenu() {
 ## Main menu ##
 ###############
 show_mainMenu() {
-mainMenu="󰀻 Apps\n Clipboard\n󰦭 Tools\n󰧮 Documentation\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
+mainMenu="󰀻 Apps\n󱄅 Nix-shell\n Clipboard\n󱣴 Screenshot\n󰦭 Tools\n󰧮 Documentation\n󰘳 Keybinds\n Settings\n⏻ Power Menu"
 ## Selection
     navigation=$(echo -e "$mainMenu" | rofi -dmenu -p "Main Menu")
     case "$navigation" in
         *Apps) rofi -show-icons -show drun;;
+        *Nix-shell) show_nixShellMenu ;;
         *Clipboard) clipcat-menu;;
+        *Screenshot) show_screenshotMenu;;
         *Mango) show_mangoMenu;;
         *Tools) show_toolsMenu;;
         *Documentation) show_docsMenu;;
@@ -188,6 +228,7 @@ if [[ -n "$1" ]]; then
         mango) show_mangoMenu;;
         places) show_placesMenu;;
         docs) show_docsMenu;;
+        screenshot) show_screenshotMenu;;
         settings) show_settingsMenu;;
         power) show_powerMenu;;
         tools) show_toolsMenu;;

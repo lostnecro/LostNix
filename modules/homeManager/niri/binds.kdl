@@ -1,10 +1,10 @@
 binds {
 
     // Application launcher
-    Mod+R { spawn-sh "rofi -show-icons -show drun"; }
+    Mod+R { spawn-sh "vicinae toggle"; }
 
     // Print
-    PRINT { spawn "flameshot" "gui"; }
+    PRINT { spawn-sh r#"grim -g "$(slurp)" - | satty --filename - --output-filename "$HOME/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png""#; }
 
     // Toolbox
     Mod+Escape { spawn-sh "bash ~/.config/lostshell/scripts/dmenu.sh"; }
@@ -13,6 +13,12 @@ binds {
     // Apps
     Mod+E { spawn "nautilus"; }
     Mod+Return { spawn "ghostty"; }
+
+    // Media control
+    XF86AudioLowerVolume { spawn-sh "wpctl set-volume @DEFAULT_SINK@ 5%-"; }
+    XF86AudioRaiseVolume { spawn-sh "wpctl set-volume @DEFAULT_SINK@ 5%+"; }
+    XF86AudioMute { spawn-sh "wpctl set-mute @DEFAULT_SINK@ toggle"; }
+    Shift+XF86AudioMute { spawn-sh "wpctl set-mute @DEFAULT_SOURCE@ toggle";}
 
     // Window control
     Mod+Q { close-window; }

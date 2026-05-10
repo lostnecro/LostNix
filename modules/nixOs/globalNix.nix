@@ -6,6 +6,6 @@
     ./locale.nix
     ./firewall.nix
     ./globalPkgs.nix
-    ./nixvim.nix
+    #./nixvim.nix
   ];
 }
