@@ -10,11 +10,8 @@
 
     #Utilities
     audacity
-    planify
     gtk2
     gtk3
-    klassy
-    python314Packages.pyqt6
     wget
     curl
     brightnessctl
@@ -26,7 +23,6 @@
     alsa-tools
     alsa-firmware
     ntfs3g
-    scrcpy
     wl-clipboard
     wev
     xwayland-satellite
@@ -40,18 +36,15 @@
     p7zip
     unzip
     unrar
-    gdk-pixbuf
-    imagemagick
     glibc
     firefox
     telegram-desktop
     xdg-desktop-portal-wlr
     xdg-desktop-portal-hyprland
     qpwgraph
+    nettools
     ocs-url
     libadwaita
-    mariadb
-    mysql84
     nil
     nixd
     awww
@@ -61,7 +54,9 @@
     easyeffects
     jamesdsp
     ungoogled-chromium
-    kdePackages.applet-window-buttons6
+    kdePackages.bluedevil
+    bluetui
+    kitty
 
     # WM Stuff
     rofi
@@ -72,20 +67,14 @@
     waybar
     pavucontrol
     ddcutil
-    vicinae
     wl-gammactl
     dunst
     mpvpaper
-    klassy
-    kurve
-    plasma-panel-colorizer
-    plasma-overdose-kde-theme
 
     #Code
     bat
     python314
     pipx
-    playwright
     git
     kitty
     vscode
@@ -114,7 +103,6 @@
     posy-cursors
     hackneyed
     bibata-cursors-translucent
-    pokemon-cursor
     marwaita-icons
     gruvbox-plus-icons
     catppuccin-kvantum
@@ -128,20 +116,12 @@
 
     #Games
     hydralauncher
-    protonup-ng
     protonup-qt
     wineWow64Packages.waylandFull
     winetricks
     heroic
     equibop
-    gamemode
-    kdePackages.bluedevil
-    bluetui
-    nettools
     prismlauncher
-    #lutris
-    blockbench
-    millennium-steam
 
     #Entertainment
     mpv
@@ -150,13 +130,11 @@
     #Creation
     kdePackages.kdenlive
     gimp
-    inkscape
     blender
     audacity
     ffmpeg-full
     imagemagick
     carla
-    ardour
 
     #Stream
     obs-studio-plugins.obs-vkcapture
@@ -194,9 +172,6 @@
   programs.gamemode.enable = true;
 
   programs.virt-manager.enable = true;
-
-  programs.cdemu.enable = true;
-  #programs.seahorse.enable = true;
 
   services.openssh.enable = true;
 

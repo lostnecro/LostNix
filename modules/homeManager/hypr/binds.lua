@@ -1,0 +1,1 @@
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("ghostty"))

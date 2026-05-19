@@ -12,36 +12,29 @@
     enable32Bit = true; # Important for Steam and other 32bit programs
   };
 
-  hardware.i2c.enable = true;
-
   #Display Manager
   services.xserver.enable = true;
   services.libinput.enable = true;
-  #services.displayManager.sddm.enable = true;
-  #services.displayManager.plasma-login-manager.enable = true;
   services.displayManager.gdm.enable = true;
 
-  #Niri
+  #Desktop Environments
   programs.niri.enable = true;
+  programs.mango.enable = true;
+  programs.xwayland.enable = true;
+  programs.hyprland.enable = true;
 
   #Gnome
-  services.desktopManager.gnome.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  programs.geary.enable = true;
   programs.nm-applet.enable = true;
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    }
+  ];
 
-  #KDE
-  services.desktopManager.plasma6.enable = false;
+  #QT
   qt.enable = true;
   qt.platformTheme = "kde";
-
-  #Mango
-  programs.mango.enable = true;
-
-  #Xwayland
-  programs.xwayland.enable = true;
-
-  security.rtkit.enable = true;
 
   #Pipewire
   services.pipewire.enable = true;
@@ -54,13 +47,8 @@
 
   #bluetooth
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.settings = {
-    General = {
-      Class = "0x002c0414";
-    };
-  };
 
-  #Docker
+  #Virtualization
   virtualisation.docker = {
     enable = true;
     daemon.settings = {
@@ -73,23 +61,17 @@
   #Flatpak
   services.flatpak.enable = true;
 
-  programs.dconf.profiles.user.databases = [
-    {
-      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-    }
-  ];
-
   #Appimage
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  #Manager external devices
+
+  #Misc
+  security.pam.services.hyprland.enableGnomeKeyring = false;
+  hardware.i2c.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-
-  security.pam.services.hyprland.enableGnomeKeyring = false;
-
-  hardware.xpadneo.enable = true;
+  security.rtkit.enable = true;
 
   #Nix garbage collector
   nix.gc = {

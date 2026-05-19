@@ -16,6 +16,6 @@
     ./mangowc/mango.nix
     ./git.nix
     ./stream.nix
-    ./gnome.nix
+    #./gnome.nix
   ];
 }

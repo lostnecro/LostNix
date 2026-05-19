@@ -7,8 +7,8 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    #nixvim.url = "github:nix-community/nixvim";
+    #nixvim.inputs.nixpkgs.follows = "nixpkgs";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     millennium.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -35,7 +35,7 @@
             #hardware-configuration.nix already imported in configuration.nix
             ./hosts/laptop/configuration.nix
             mangowc.nixosModules.mango
-            nixvim.nixosModules.nixvim
+            #nixvim.nixosModules.nixvim
             {
               nixpkgs.overlays = [ inputs.millennium.overlays.default ];
             }

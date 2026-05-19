@@ -2,7 +2,7 @@
 
 {
   programs.qutebrowser = {
-    enable = true;
+    enable = false;
     searchEngines = {
       DEFAULT = "https://www.google.com/search?q={}";
       ddg = "https://duckduckgo.com/search?q={}";
