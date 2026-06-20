@@ -9,51 +9,30 @@
   environment.systemPackages = with pkgs; [
 
     #Utilities
-    audacity
-    gtk2
-    gtk3
     wget
     curl
     brightnessctl
     distrobox
-    e2fsprogs
     killall
     btop
     remmina
-    alsa-tools
-    alsa-firmware
-    ntfs3g
     wl-clipboard
     wev
     xwayland-satellite
-    gnome-keyring
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
-    kdePackages.polkit-kde-agent-1
     bluez
     ncdu
-    zenity
     p7zip
     unzip
     unrar
-    glibc
     firefox
     telegram-desktop
-    xdg-desktop-portal-wlr
-    xdg-desktop-portal-hyprland
     qpwgraph
     nettools
     ocs-url
-    libadwaita
     nil
     nixd
-    awww
-    nautilus
-    gparted
     thunderbird
-    easyeffects
     jamesdsp
-    ungoogled-chromium
     kdePackages.bluedevil
     bluetui
     kitty
@@ -66,7 +45,6 @@
     slurp
     waybar
     pavucontrol
-    ddcutil
     wl-gammactl
     dunst
     mpvpaper
@@ -82,11 +60,6 @@
     lazydocker
     ghostty
     zed-editor
-
-    #Emulators
-    pcsx2
-    snes9x
-    ppsspp-sdl-wayland
 
     #Rice
     nerd-fonts.ubuntu
@@ -111,7 +84,6 @@
     #Privacy/Security
     proton-vpn
     keepassxc
-    hyprpolkitagent
     gh
 
     #Games
@@ -123,6 +95,10 @@
     equibop
     prismlauncher
 
+    #Emulators
+    pcsx2
+    ppsspp-sdl-wayland
+
     #Entertainment
     mpv
     ani-cli
@@ -131,10 +107,6 @@
     kdePackages.kdenlive
     gimp
     blender
-    audacity
-    ffmpeg-full
-    imagemagick
-    carla
 
     #Stream
     obs-studio-plugins.obs-vkcapture
@@ -143,8 +115,7 @@
     obs-cli
 
     #Study
-    tagainijisho
-
+    obsidian
   ];
 
   #Fonts
@@ -159,8 +130,6 @@
 
   ];
   fonts.enableDefaultPackages = true;
-
-  programs.hyprlock.enable = true;
 
   services.logmein-hamachi.enable = true;
   programs.haguichi.enable = true;

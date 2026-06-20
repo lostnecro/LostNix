@@ -4,7 +4,7 @@
   services.flameshot = {
     enable = true;
     settings.General = {
-      useGrimAdapter = true;
+      useGrimAdapter = false;
     };
   };
 }

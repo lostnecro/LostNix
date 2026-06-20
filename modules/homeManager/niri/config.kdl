@@ -1,5 +1,0 @@
-include "binds.kdl"
-include "boot.kdl"
-include "settings.kdl"
-include "monitor.kdl"
-include "rules.kdl"
