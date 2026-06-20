@@ -3,6 +3,7 @@
 {
   xdg.configFile = {
     "./ascii.txt".source = ./ascii.txt;
+    "./logo.png".source = ./logo.png;
   };
 
   programs.fastfetch = {
@@ -10,7 +11,8 @@
     settings = {
       logo = {
         #type = "kitty";
-        source = "$HOME/.config/ascii.txt";
+        source = "$HOME/.config/logo.png";
+        height = 30;
       };
       padding = 2;
       modules = [
