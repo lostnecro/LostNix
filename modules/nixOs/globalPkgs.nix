@@ -36,6 +36,12 @@
     kdePackages.bluedevil
     bluetui
     kitty
+    krusader
+    kdePackages.konqueror
+    copyq
+    kdePackages.ktorrent
+    waveterm
+    broot
 
     # WM Stuff
     rofi
@@ -80,6 +86,11 @@
     gruvbox-plus-icons
     catppuccin-kvantum
     kdePackages.qtstyleplugin-kvantum
+    edukai
+    wqy_zenhei
+    eduli
+    moeli
+    kdePackages.kalk
 
     #Privacy/Security
     proton-vpn
@@ -135,8 +146,7 @@
   programs.haguichi.enable = true;
 
   programs.steam = {
-    enable = false;
-    package = pkgs.millennium-steam;
+    enable = true;
   };
   programs.gamemode.enable = true;
 

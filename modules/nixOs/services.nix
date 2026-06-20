@@ -15,7 +15,11 @@
   #Display Manager
   services.xserver.enable = true;
   services.libinput.enable = true;
-  services.displayManager.sddm.enable = true;
+
+  #Plasma
+  services.displayManager.plasma-login-manager.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.kdeconnect.enable = true;
 
   #Desktop Environments
   programs.xwayland.enable = true;

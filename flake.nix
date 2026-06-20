@@ -28,9 +28,9 @@
           modules = [
             #hardware-configuration.nix already imported in configuration.nix
             ./hosts/laptop/configuration.nix
-            mangowc.nixosModules.mango
             {
               nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+              
             }
           ];
         };

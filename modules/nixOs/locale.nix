@@ -19,7 +19,7 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  i18n.extraLocales = [
+  i18n.supportedLocales = [
     "all"
   ];
 

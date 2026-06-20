@@ -12,8 +12,9 @@
 
   programs.git = {
     enable = true;
-    settings = {
+    extraConfig = {
       credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
+      include.path = "~/.config/git/.gitconfig.local";
     };
   };
 }
