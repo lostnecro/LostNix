@@ -11,8 +11,8 @@
     settings = {
       logo = {
         #type = "kitty";
-        source = "$HOME/.config/logo.png";
-        height = 30;
+        source = "$HOME/.config/ascii.txt";
+        #height = 30;
       };
       padding = 2;
       modules = [

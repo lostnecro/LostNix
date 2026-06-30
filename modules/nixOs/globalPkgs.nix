@@ -42,6 +42,12 @@
     kdePackages.ktorrent
     waveterm
     broot
+    ferdium
+    freerdp
+    dialog
+    iproute2
+    libnotify
+    netcat-openbsd
 
     # WM Stuff
     rofi
@@ -138,7 +144,7 @@
     ipafont
     nerd-fonts.jetbrains-mono
     minecraftia
-
+    cherry
   ];
   fonts.enableDefaultPackages = true;
 
@@ -147,6 +153,7 @@
 
   programs.steam = {
     enable = true;
+    package = pkgs.millennium-steam;
   };
   programs.gamemode.enable = true;
 

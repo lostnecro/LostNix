@@ -35,6 +35,10 @@
     fcitx5.addons = with pkgs; [
       fcitx5-mozc
       fcitx5-gtk
+      kdePackages.fcitx5-chinese-addons
+      fcitx5-fluent
+      fcitx5-mellow-themes
+      fcitx5-inflex-themes
     ];
   };
 

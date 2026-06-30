@@ -21,6 +21,9 @@
   services.desktopManager.plasma6.enable = true;
   programs.kdeconnect.enable = true;
 
+  #Hyprland
+  programs.hyprland.enable = true;
+
   #Desktop Environments
   programs.xwayland.enable = true;
 
