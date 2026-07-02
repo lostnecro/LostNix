@@ -17,12 +17,23 @@
   services.libinput.enable = true;
 
   #Plasma
-  services.displayManager.plasma-login-manager.enable = true;
+  services.displayManager.plasma-login-manager.enable = false;
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.kdeconnect.enable = true;
 
+  #Gnome
+  #services.desktopManager.gnome.enable = true;
+  #services.gnome.gnome-browser-connector.enable = true;
+  #services.gnome.core-apps.enable = false;
+  #programs.evince.enable = true;
+  #programs.geary.enable = true;
+  #services.displayManager.gdm.enable = true;
+  
+
   #Hyprland
   programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
 
   #Desktop Environments
   programs.xwayland.enable = true;
@@ -56,6 +67,9 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  #Security
+  security.pam.services.login.kwallet.enable = true;
+  security.pam.services.sddm.kwallet.enable = true;
 
   #Misc
   hardware.i2c.enable = true;

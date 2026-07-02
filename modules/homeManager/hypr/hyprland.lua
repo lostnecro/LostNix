@@ -1,5 +1,5 @@
 -- Imports
 
 require("boot")
-requite("monitors")
+require("monitors")
 require("binds")

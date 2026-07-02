@@ -48,6 +48,14 @@
     iproute2
     libnotify
     netcat-openbsd
+    kdePackages.kwallet-pam
+    kdePackages.kwallet
+    kdePackages.kwalletmanager
+    networkmanagerapplet
+    awww
+    playerctl
+    yt-dlp
+
 
     # WM Stuff
     rofi

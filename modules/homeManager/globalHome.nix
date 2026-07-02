@@ -12,6 +12,7 @@
     ./flameshot.nix
     ./git.nix
     ./stream.nix
-    #./gnome.nix
+    ./hyprland.nix
+    ./gnome.nix
   ];
 }
