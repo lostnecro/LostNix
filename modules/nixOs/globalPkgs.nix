@@ -52,10 +52,14 @@
     kdePackages.kwallet
     kdePackages.kwalletmanager
     networkmanagerapplet
+    kdePackages.krohnkite
     awww
     playerctl
     yt-dlp
-
+    kdePackages.kio-gdrive
+    mpc-qt
+    nautilus
+    sushi
 
     # WM Stuff
     rofi
@@ -141,6 +145,7 @@
 
     #Study
     obsidian
+    anki
   ];
 
   #Fonts
@@ -153,6 +158,7 @@
     nerd-fonts.jetbrains-mono
     minecraftia
     cherry
+    noto-fonts-cjk-sans
   ];
   fonts.enableDefaultPackages = true;
 

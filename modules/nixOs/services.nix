@@ -17,23 +17,27 @@
   services.libinput.enable = true;
 
   #Plasma
-  services.displayManager.plasma-login-manager.enable = false;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  programs.kdeconnect.enable = true;
+  #services.displayManager.plasma-login-manager.enable = false;
+  #services.displayManager.sddm.enable = true;
+  #services.desktopManager.plasma6.enable = true;
+  #programs.kdeconnect.enable = true;
 
   #Gnome
-  #services.desktopManager.gnome.enable = true;
-  #services.gnome.gnome-browser-connector.enable = true;
-  #services.gnome.core-apps.enable = false;
-  #programs.evince.enable = true;
-  #programs.geary.enable = true;
-  #services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+  services.gnome.gnome-browser-connector.enable = true;
+  services.gnome.core-apps.enable = false;
+  programs.evince.enable = true;
+  programs.geary.enable = true;
+  services.displayManager.gdm.enable = true;
   
 
   #Hyprland
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
+
+  #Niri
+  programs.niri.enable = true;
+  programs.niri.useNautilus = true;
 
   #Desktop Environments
   programs.xwayland.enable = true;
