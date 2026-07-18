@@ -62,6 +62,19 @@
     ];
   };
 
+  system.features = {
+    plasma   = true;
+    niri     = true;
+    hyprland = false;
+    labwc    = false;
+    millennium = true;
+    hamachi  = false;
+    virtualbox = false;
+    libvirtd   = true;
+    flatpak    = true;
+    appimage   = true;
+  };
+
   #Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };

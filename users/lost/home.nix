@@ -14,6 +14,7 @@
 
   imports = [
     ./shell.nix
+    ./packages.nix
     ./apps-config
   ];
 
