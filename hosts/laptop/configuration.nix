@@ -66,7 +66,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "lost" = import ../../modules/homeManager/home.nix;
+      "lost" = import ../../users/lost/home.nix;
     };
   };
 
