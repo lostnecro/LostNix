@@ -16,6 +16,7 @@
   imports = [
     ./shell.nix
     ./packages.nix
+    ./flatpak.nix
     ./apps-config
   ];
 
