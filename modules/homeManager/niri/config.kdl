@@ -1,21 +1,89 @@
 include "binds.kdl"
 
+spawn-at-startup "waybar"
+spawn-at-startup "nm-applet"
+spawn-at-startup "fcitx5 -d"
+spawn-at-startup "dunst"
+spawn-at-startup "awww-daemon"
+
+input {
+    focus-follows-mouse max-scroll-amount="90%"
+
+    touchpad {
+        tap
+        natural-scroll
+        dwt
+    }
+    
+}
+
 output "eDP-1" {
     // off
     mode "1920x1080@60"
     scale 1.0
-    //transform "90"
-    position x=1280 y=0
-    //variable-refresh-rate // on-demand=true
-    focus-at-startup
-    backdrop-color "#001100"
-    // max-bpc 8
+    position x=1920 y=0
+    backdrop-color "transparent"
 
     hot-corners {
-        // off
+        off
         top-left
-        // top-right
-        // bottom-left
-        // bottom-right
+    }
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@100"
+    scale 1.0
+    focus-at-startup
+    position x=0 y=0
+    backdrop-color "transparent"
+}
+
+environment {
+    TZDIR "/etc/zoneinfo"
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "wayland;fcitx"
+    XMODIFIERS "@im=fcitx"
+    SDL_IM_MODULE "fcitx"
+    GLFW_IM_MODULE "ibus"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+layout {
+    background-color "transparent"
+    gaps 16
+    always-center-single-column
+    //default-column-display "tabbed"
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        //off
+        width 2
+        active-gradient from="#ffffff" to="#6161616c" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#61616120" to="#ffffff2c" angle=45 relative-to="workspace-view"
+        urgent-gradient from="rgb(136, 95, 0)" to="#a33" angle=45
+    }
+
+    border {
+        off
+    }
+}
+
+overview {
+    workspace-shadow {
+        off
     }
 }

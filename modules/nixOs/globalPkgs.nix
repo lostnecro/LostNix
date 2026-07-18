@@ -32,17 +32,9 @@
     nil
     nixd
     thunderbird
-    jamesdsp
     kdePackages.bluedevil
     bluetui
     kitty
-    krusader
-    kdePackages.konqueror
-    copyq
-    kdePackages.ktorrent
-    waveterm
-    broot
-    ferdium
     freerdp
     dialog
     iproute2
@@ -56,8 +48,6 @@
     awww
     playerctl
     yt-dlp
-    kdePackages.kio-gdrive
-    mpc-qt
     nautilus
     sushi
 
@@ -71,7 +61,6 @@
     pavucontrol
     wl-gammactl
     dunst
-    mpvpaper
 
     #Code
     bat
@@ -109,6 +98,9 @@
     eduli
     moeli
     kdePackages.kalk
+    firefox
+    kdePackages.kget
+    qbittorrent
 
     #Privacy/Security
     proton-vpn

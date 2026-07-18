@@ -18,7 +18,7 @@
       ...
     }@inputs:
     let
-
+      
     in
     {
       nixosConfigurations = {
