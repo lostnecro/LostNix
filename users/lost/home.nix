@@ -3,6 +3,7 @@
 {
   home.username = "lost";
   home.homeDirectory = "/home/lost";
+  nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
 
