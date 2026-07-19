@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     millennium.inputs.nixpkgs.follows = "nixpkgs";
-
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs =
@@ -15,6 +15,7 @@
       self,
       nixpkgs,
       millennium,
+      nixvim,
       ...
     }@inputs:
     let

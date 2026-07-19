@@ -9,5 +9,6 @@
     ./niri/niri.nix
     ./waybar/waybar.nix
     ./stream.nix
+    ./vim.nix
   ];
 }

@@ -12,7 +12,6 @@
     killall
     nettools
     kdePackages.bluedevil
-    neovim
   ];
 
   #Fonts
