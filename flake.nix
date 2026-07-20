@@ -16,6 +16,7 @@
       nixpkgs,
       millennium,
       nixvim,
+      home-manager,
       ...
     }@inputs:
     let
@@ -29,6 +30,11 @@
           modules = [
             #hardware-configuration.nix already imported in configuration.nix
             ./hosts/laptop/configuration.nix
+
+            home-manager.nixosModules.home-manager{
+              home-manager.extraSpecialArgs = { inherit inputs; };
+            }
+            
             {
               nixpkgs.overlays = [ inputs.millennium.overlays.default ];
               

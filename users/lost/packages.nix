@@ -24,7 +24,6 @@
     nixd
     thunderbird
     bluetui
-    kitty
     freerdp
     dialog
     iproute2
@@ -40,6 +39,7 @@
     yt-dlp
     nautilus
     sushi
+    yazi
 
     ## --- WM Stuff ---
     rofi

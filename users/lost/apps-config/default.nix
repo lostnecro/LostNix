@@ -10,5 +10,7 @@
     ./waybar/waybar.nix
     ./stream.nix
     ./vim.nix
+    ./kitty.nix
+    ./qute.nix
   ];
 }
