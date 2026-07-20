@@ -8,5 +8,8 @@
       aw = "https://wiki.archlinux.org/?search={}";
       nw = "https://wiki.nixos.org/index.php?search={}";
     };
+    settings = {
+      content.blocking.enabled = true;
+    };
   };
 }

@@ -6,6 +6,8 @@ spawn-at-startup "fcitx5 -d"
 spawn-at-startup "dunst"
 spawn-at-startup "awww-daemon"
 
+prefer-no-csd
+
 input {
     focus-follows-mouse max-scroll-amount="90%"
 

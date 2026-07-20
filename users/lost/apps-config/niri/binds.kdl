@@ -25,6 +25,9 @@ binds {
     Shift+XF86AudioMute { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86MonBrightnessUp { spawn-sh "brightnessctl set +5%"; }
     XF86MonBrightnessDown { spawn-sh "brightnessctl set 5%-"; }
+    
+    // Monitors
+    Mod+M { focus-monitor-next;}
 
     // Workspace Binds
     Mod+1 { focus-workspace 1; }

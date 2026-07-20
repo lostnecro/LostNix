@@ -76,6 +76,11 @@
         key = "<leader>tt";
         action = "<cmd>ToggleTerm<cr>";
       }
+      {
+        mode = "n";
+        key = "<leader>´c";
+        action = "<cmd>BufferLinePickClose<cr>";
+      }
     ];
   };
 }
